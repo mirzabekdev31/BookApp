@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020507"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/LastName"
+                android:layout_margin="10dp"
+                style="@style/EditText"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:hint="lastName"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/LastName"
+                android:layout_width="match_parent"
+                style="@style/EditText"
+                android:hint="firstName"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_margin="10dp"
+                style="@style/EditText"
+                app:layout_constraintTop_toBottomOf="@id/firstName"
+                android:layout_width="match_parent"
+                android:hint="Password"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_margin="10dp"
+                style="@style/EditText"
+                app:layout_constraintTop_toBottomOf="@id/password"
+                android:layout_width="match_parent"
+                android:hint="Phone"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonSignUp"
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

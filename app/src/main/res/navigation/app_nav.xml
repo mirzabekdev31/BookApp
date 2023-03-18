@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash"
+        >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+        <action
+            android:id="@+id/action_splashScreen_to_bookScreen"
+            app:destination="@id/bookScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.LoginScreen"
+        android:label="LoginScreen"
+        tools:layout="@layout/screen_login"
+        >
+        <action
+            android:id="@+id/action_loginScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_verifyLoginScreen"
+            app:destination="@id/verifyLoginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.SignUpScreen"
+        android:label="SignUpScreen"
+        tools:layout="@layout/screen_sign_up"
+        >
+        <action
+            android:id="@+id/action_signUpScreen_to_verifyScreen"
+            app:destination="@id/verifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.VerifyScreen"
+        android:label="VerifyScreen"
+        tools:layout="@layout/screen_verify"
+        >
+        <action
+            android:id="@+id/action_verifyScreen_to_bookScreen"
+            app:destination="@id/bookScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyLoginScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.VerifyLoginScreen"
+        android:label="VerifyLoginScreen"
+        tools:layout="@layout/screen_login_verify"
+        >
+        <action
+            android:id="@+id/action_verifyLoginScreen_to_bookScreen"
+            app:destination="@id/bookScreen"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/bookScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.BookScreen"
+        android:label="BookScreen"
+        tools:layout="@layout/screen_book"
+        >
+        <action
+            android:id="@+id/action_bookScreen_to_userScreen"
+            app:destination="@id/userScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/userScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.UserScreen"
+        android:label="UserScreen"
+        tools:layout="@layout/screen_users"
+        >
+        <action
+            android:id="@+id/action_userScreen_to_bookScreen"
+            app:destination="@id/bookScreen" />
+        <action
+            android:id="@+id/action_userScreen_to_userBooksScreen"
+            app:destination="@id/userBooksScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/userBooksScreen"
+        android:name="uz.gita.mirzabek.example.bookapp.prisentation.ui.screens.UserBooksScreen"
+        android:label="UserBooksScreen"
+        tools:layout="@layout/screen_user_books"
+        />
+</navigation>
